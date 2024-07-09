@@ -1,28 +1,44 @@
 import '../styles/ContactPage.css';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+
 function ContactPage() {
   return (
     <div className="contact-page">
-      <h1>Contacto</h1>
-      <div className="contact-info">
-        <p>Utiliza las siguientes vías de contacto, o rellena el formulario.</p>
-        <p>Vía E-mail: </p>
-        <a href="mailto:" id="email">devs@gmail.com</a>
-        <p>Por teléfono: </p>
-        <a href='tel:+593982856987' id="number">+593982856987</a>
-      </div>
-      <div className="social-media">
-        <p>Siguenos en redes</p>
-        <a href="#" className="instagram">Instagram</a>
-        <a href="#" className="linkedin">LinkedIn</a>
-      </div>
-      <form className="contact-form">
-        <input type="text" placeholder="Escribe tu nombre" />
-        <input type="email" placeholder="Escribe tu e-mail" />
-        <input type="tel" placeholder="Escribe tu teléfono (Opcional)" />
-        <textarea placeholder="Escribe tu mensaje"></textarea>
-        <button type="submit">ENVIAR MENSAJE</button>
-      </form>
+      <h1>CONTACTO</h1>
+      <div className="contact-content">
+        <div className="contact-info">
+          <p>Utiliza las siguientes vías de contacto, o rellena el formulario.</p>
+          <p>Vía E-mail: <a href="mailto:devs@gmail.com">devs@gmail.com</a></p>
+          <p>Por teléfono: <a href="tel:+593984572375">+593 - 984572375</a></p>
+          <div className="social-media">
+            <p>Nuestras redes sociales</p>
+            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="https://github.com/Ariels875" aria-label="GitHub"><FaGithub /></a>
+          </div>
+        </div>
+        <form className="contact-form">
+          <input type="text" placeholder="Escribe tu nombre" />
+          <input type="email" placeholder="Escribe tu e-mail" />
+          <input type="tel" placeholder="Escribe tu teléfono (Opcional)" />
+          <textarea placeholder="Escribe tu mensaje"></textarea>
+          <button className="btn" type="submit">
+            <strong>Enviar Mensaje</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
 
+            <div id="glow">
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </button>
+
+        </form>
+      </div>
+      <div className="footer">
+        DEVS - 2024
+      </div>
     </div>
   );
 }
