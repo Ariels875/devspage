@@ -28,13 +28,19 @@ function Header() {
 
   return (
     <header>
-      <div className="logo">DEVS</div>
-      <nav>
-        <a onClick={() => scrollToSection('inicio')} className={activeSection === 'inicio' ? 'active' : ''}>INICIO</a>
-        <a onClick={() => scrollToSection('servicios')} className={activeSection === 'servicios' ? 'active' : ''}>SERVICIOS</a>
-        <a onClick={() => scrollToSection('portafolios')} className={activeSection === 'portafolios' ? 'active' : ''}>PORTAFOLIOS</a>
-        <a onClick={() => scrollToSection('contacto')} className={activeSection === 'contacto' ? 'active' : ''}>CONTACTO</a>
-      </nav>
+      
+      <div className="element-container">
+        <div className="logo">DEVS</div>
+        <div className='nav'>
+          <nav>
+            <a onClick={() => scrollToSection('inicio')} className={activeSection === 'inicio' ? 'active' : ''}>INICIO</a>
+            <a onClick={() => scrollToSection('servicios')} className={activeSection === 'servicios' ? 'active' : ''}>SERVICIOS</a>
+            <a onClick={() => scrollToSection('portafolios')} className={activeSection === 'portafolios' ? 'active' : ''}>PORTAFOLIOS</a>
+            <a onClick={() => scrollToSection('contacto')} className={activeSection === 'contacto' ? 'active' : ''}>CONTACTO</a>
+          </nav>
+        </div>
+
+      </div>
     </header>
   );
 }

@@ -12,6 +12,17 @@
   .contact-info {
     margin-bottom: 40px;
   }
+  .contact-info p:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #email {
+    color: #00c8ff;
+  }
+  #number {
+    color: #00c8ff;
+  }
   
   .contact-form {
     display: flex;
