@@ -10,11 +10,13 @@
   
   .home-page h1 {
     font-size: 172px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 1px;
+    margin-top: 3px;
   }
   
   .home-page p {
     font-size: 18px;
     color: #ccc;
+    margin-bottom: 200px;
+    margin-top: 2px;
   }
