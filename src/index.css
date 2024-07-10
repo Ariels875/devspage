@@ -5,15 +5,19 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0c0c0c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-a {
+.App {
+  min-height: 100vh;
+}
+.home-page, .services-page, .portfolios-page, .contact-page {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+  a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
