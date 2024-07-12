@@ -1,45 +1,65 @@
 import '../styles/Header.css';
-import  { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function Header() {
   const [activeSection, setActiveSection] = useState('inicio');
+  const observer = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['inicio', 'servicios', 'portafolios', 'contacto'];
-      const scrollPosition = window.scrollY;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element.offsetTop <= scrollPosition + 100) {
-          setActiveSection(section);
-        }
-      }
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    observer.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    const sections = ['inicio', 'servicios', 'portafolios', 'contacto'];
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) observer.current.observe(element);
+    });
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
-    element.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <header>
-      
       <div className="element-container">
-        <div className="logo">DEVS</div>
+        <div className="logo">
+          <img src="https://i.imgur.com/kvpMPGy.png" alt="DEVS" />
+          <span>DEVS</span>
+        </div>
         <div className='nav'>
           <nav>
-            <a onClick={() => scrollToSection('inicio')} className={activeSection === 'inicio' ? 'active' : ''}>INICIO</a>
-            <a onClick={() => scrollToSection('servicios')} className={activeSection === 'servicios' ? 'active' : ''}>SERVICIOS</a>
-            <a onClick={() => scrollToSection('portafolios')} className={activeSection === 'portafolios' ? 'active' : ''}>PORTAFOLIOS</a>
-            <a onClick={() => scrollToSection('contacto')} className={activeSection === 'contacto' ? 'active' : ''}>CONTACTO</a>
+            {['inicio', 'servicios', 'portafolios', 'contacto'].map((section) => (
+              <a 
+                key={section}
+                onClick={() => scrollToSection(section)} 
+                className={activeSection === section ? 'active' : ''}
+              >
+                {section.toUpperCase()}
+              </a>
+            ))}
           </nav>
         </div>
-
       </div>
     </header>
   );

@@ -1,12 +1,12 @@
 header {
-  position: relative;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  width: 95%;
+  width: 100%;
 }
 
 .element-container {
@@ -16,11 +16,21 @@ header {
   width: 95%;
   position: fixed;
 }
-
 .logo {
+  display: flex;
+}
+.logo span {
+  margin-top: 30px;
   font-size: 24px;
   font-weight: bold;
 }
+.logo img {
+  display: flex;
+  margin-top: 15px;
+  width: 75px;
+  height: 75px;
+}
+
 
 .nav {
   display: flex;
