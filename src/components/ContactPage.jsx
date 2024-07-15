@@ -1,5 +1,5 @@
 import '../styles/ContactPage.css';
-import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function ContactPage() {
   return (
@@ -12,8 +12,8 @@ function ContactPage() {
           <p>Por teléfono: <a href="tel:+593984572375">+593 - 984572375</a></p>
           <div className="social-media">
             <p>Nuestras redes sociales</p>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="https://www.facebook.com/profile.php?id=61562707679910&mibextid=ZbWKwL" aria-label="Instagram"><FaFacebook /></a>
+            <a href="http://www.linkedin.com/in/devssch" aria-label="LinkedIn"><FaLinkedin /></a>
             <a href="https://github.com/Ariels875" aria-label="GitHub"><FaGithub /></a>
           </div>
         </div>
@@ -24,14 +24,6 @@ function ContactPage() {
           <textarea placeholder="Escribe tu mensaje"></textarea>
           <button className="btn" type="submit">
             <strong>Enviar Mensaje</strong>
-            <div id="container-stars">
-              <div id="stars"></div>
-            </div>
-
-            <div id="glow">
-              <div className="circle"></div>
-              <div className="circle"></div>
-            </div>
           </button>
 
         </form>
