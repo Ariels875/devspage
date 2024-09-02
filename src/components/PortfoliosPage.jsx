@@ -15,7 +15,7 @@ function PortfoliosPage() {
           <p>Desarrollador especializado en el frontend</p>
           <button
             className="btn"
-            onClick={() => openInNewTab('https://arielspage.pages.dev/')}
+            onClick={() => openInNewTab('https://ariels.pages.dev/')}
           >
             <strong>Ver Portfolio</strong>
           </button>
