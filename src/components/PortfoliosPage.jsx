@@ -33,9 +33,9 @@ function PortfoliosPage() {
         </div>
       </div>
       <div className="portfolio" id='porfolio3'>
-          <img src="https://i.imgur.com/wlB2AO0.jpg" alt="LUIS LOPEZ" />
+          <img src="https://i.imgur.com/AalTH9H.jpg" alt="LUIS LOPEZ" />
           <h2>LUIS LOPEZ</h2>
-          <p>Diseñador web</p>
+          <p>Experto en ciberseguridad</p>
           <button
             className="btn"
             onClick={() => openInNewTab('https://www.linkedin.com/in/luis-l%C3%B3pez-313265267/')}
