@@ -32,6 +32,17 @@ function PortfoliosPage() {
           </button>
         </div>
       </div>
+      <div className="portfolio" id='porfolio3'>
+          <img src="https://i.imgur.com/wlB2AO0.jpg" alt="LUIS LOPEZ" />
+          <h2>LUIS LOPEZ</h2>
+          <p>Diseñador web</p>
+          <button
+            className="btn"
+            onClick={() => openInNewTab('https://www.linkedin.com/in/luis-l%C3%B3pez-313265267/')}
+          >
+            <strong>Ver Portfolio</strong>
+          </button>
+        </div>
     </div>
   );
 }
